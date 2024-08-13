@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Parma-App{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <a href="/" class="text-xl font-bold">PharmaTech</a>
+          <ul class="flex space-x-4">
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="/about" class="hover:underline">About</a></li>
+            <li><a href="/services" class="hover:underline">Services</a></li>
+            <li><a href="/contact" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto my-8">
+      {% block content %}
+      <!-- Page-specific content will be injected here -->
+      {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 mt-8">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+        <p>
+          Follow us on 
+          <a href="#" class="hover:underline">Facebook</a>, 
+          <a href="#" class="hover:underline">Twitter</a>, and 
+          <a href="#" class="hover:underline">Instagram</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>
